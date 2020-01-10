@@ -2,29 +2,34 @@
   "generator-jhipster": {
     "applicationType": "monolith",
     "gitCompany": "",
-    "baseName": "PeopleProfile",
+    "baseName": "people",
     "packageName": "com.pepsico.people",
     "packageFolder": "com/pepsico/people",
-    "serverPort": 8091,
+    "serverPort": "8080",
     "serviceDiscoveryType": false,
-    "authenticationType": "session",
+    "authenticationType": "jwt",
     "uaaBaseName": "../uaa",
-    "cacheProvider": "ehcache",
+    "cacheProvider": "hazelcast",
     "enableHibernateCache": true,
     "websocket": false,
     "databaseType": "sql",
-    "devDatabaseType": "mssql",
-    "prodDatabaseType": "mssql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
     "searchEngine": false,
     "enableSwaggerCodegen": false,
     "messageBroker": false,
     "buildTool": "maven",
     "useSass": true,
     "clientPackageManager": "npm",
-    "testFrameworks": [],
+    "testFrameworks": [
+      "protractor"
+    ],
     "enableTranslation": true,
     "nativeLanguage": "en",
-    "languages": ["en"],
+    "languages": [
+      "en",
+      "fr"
+    ],
     "clientFramework": "react",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "6.6.0",
@@ -34,10 +39,17 @@
     "creationTimestamp": 1578675976067,
     "entitySuffix": "",
     "dtoSuffix": "DTO",
-    "otherModules": [],
-    "blueprints": []
+    "blueprints": [],
+    "skipClient": false,
+    "skipServer": false,
+    "skipUserManagement": false,
+    "clientThemeVariant": ""
   },
   "git-provider": "GitHub",
   "git-company": "niranjan-prusty",
-  "repository-name": "people-profile"
+  "repository-name": "people-profile",
+  "entities": [
+    "WrkfrcCoreCf",
+    "WrkfrcCoreCfExtn"
+  ]
 }
